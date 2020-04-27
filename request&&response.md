@@ -68,3 +68,21 @@
 						attachment;filename=xxxx :以附件形式打开响应体
 	3. 响应空行
 	4. 响应体:真实传输的数据
+
+###重定向:资源跳转的方式
+	代码实现:
+	//1.设置状态码为302
+	response.setstatus(302);
+	//2.设置响应头location
+	response.setHeader(”location"，”/day15/responseDemo2" );*/
+	//简单的重定向方法
+	response. sendRedirect( "/day15/responseDemo2") ;
+
+####重定向的特点
+	1. 地址栏发生变化
+	2. 重定向可以访问其他站点(服务器)的资源
+	3. 重定向是两次请求
+####转发的特点:
+	1. 转发地址栏路径不变
+	2. 转发只能访问当前服务器下的资源
+	3. 转发是一次请求
